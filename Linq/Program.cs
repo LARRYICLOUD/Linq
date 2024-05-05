@@ -7,6 +7,7 @@ var names = new List<string>()
 
 };
 var namesResult = (from n in names
+                   where n.Length > 3 && n.Length < 5
                    orderby n ascending  //descending 
                    select n).ToList();                 //consulta de datos
 
